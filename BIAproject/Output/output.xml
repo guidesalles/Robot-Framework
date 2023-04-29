@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230311 16:07:44.245" rpa="false" schemaversion="3">
+<suite id="s1" name="biaLoginDEV" source="C:\Users\sankhya\Downloads\BIAproject\Tests\biaLoginDEV.robot">
+<test id="s1-t1" name="Open_App" line="5">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=483131cb</arg>
+<arg>appPackage=br.com.sankhya.bia 4.0.74</arg>
+<arg>appActivity=br.com.sankhya.bia.sankhya_bia.MainActivity - Sankhya BIA</arg>
+<arg>automationName=Uiautomator2</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<msg timestamp="20230311 16:07:44.408" level="TRACE">Arguments: [ 'http://localhost:4723/wd/hub' | platformName='Android' | deviceName='483131cb' | appPackage='br.com.sankhya.bia 4.0.74' | appActivity='br.com.sankhya.bia.sankhya_bia.MainActivity - Sankhya BIA' | automationName='Uiautomator2' ]</msg>
+<msg timestamp="20230311 16:07:44.408" level="DEBUG">POST http://localhost:4723/wd/hub/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"platformName": "Android", "appium:deviceName": "483131cb", "appium:appPackage": "br.com.sankhya.bia 4.0.74", "appium:appActivity": "br.com.sankhya.bia.sankhya_bia.MainActivity - Sankhya BIA", "appium:automationName": "Uiautomator2"}}}</msg>
+<msg timestamp="20230311 16:07:44.435" level="DEBUG">Starting new HTTP connection (1): localhost:4723</msg>
+<msg timestamp="20230311 16:07:48.564" level="DEBUG">http://localhost:4723 "POST /wd/hub/session HTTP/1.1" 500 641</msg>
+<msg timestamp="20230311 16:07:48.564" level="DEBUG">Remote response: status=500 | data={"value":{"error":"unknown error","message":"An unknown server-side error occurred while processing the command. Original error: 'app' option is required for reinstall","stacktrace":"UnknownError: An unknown server-side error occurred while processing the command. Original error: 'app' option is required for reinstall\n    at getResponseForW3CError (C:\\Users\\sankhya\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-base-driver\\lib\\protocol\\errors.js:804:9)\n    at asyncHandler (C:\\Users\\sankhya\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\appium-base-driver\\lib\\protocol\\protocol.js:380:37)"}} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '641', 'ETag': 'W/"281-d96ZkuRqYtJaVwduL7IYvTUgnVg"', 'Date': 'Sat, 11 Mar 2023 19:07:48 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg timestamp="20230311 16:07:48.565" level="DEBUG">Finished Request</msg>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20230311 16:07:48.565" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20230311 16:07:48.565" level="FAIL">No application is open</msg>
+<msg timestamp="20230311 16:07:48.570" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\sankhya\AppData\Local\Programs\Python\Python311\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sankhya\AppData\Local\Programs\Python\Python311\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 60, in open_application
+    application = webdriver.Remote(str(remote_url), options=desired_caps, strict_ssl=strict_ssl)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sankhya\AppData\Local\Programs\Python\Python311\Lib\site-packages\appium\webdriver\webdriver.py", line 230, in __init__
+    super().__init__(
+  File "C:\Users\sankhya\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 286, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "C:\Users\sankhya\AppData\Local\Programs\Python\Python311\Lib\site-packages\appium\webdriver\webdriver.py", line 320, in start_session
+    response = self.execute(RemoteCommand.NEW_SESSION, w3c_caps)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sankhya\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\sankhya\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'app' option is required for reinstall
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'app' option is required for reinstall
+    at getResponseForW3CError (C:\Users\sankhya\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Users\sankhya\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:380:37)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sankhya\AppData\Local\Programs\Python\Python311\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sankhya\AppData\Local\Programs\Python\Python311\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 21, in _run_on_failure_decorator
+    raise err
+  File "C:\Users\sankhya\AppData\Local\Programs\Python\Python311\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sankhya\AppData\Local\Programs\Python\Python311\Lib\site-packages\AppiumLibrary\keywords\_screenshot.py", line 34, in capture_page_screenshot
+    base64_screenshot = self._current_application().get_screenshot_as_base64()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sankhya\AppData\Local\Programs\Python\Python311\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 469, in _current_application
+    raise RuntimeError('No application is open')
+RuntimeError: No application is open</msg>
+<status status="FAIL" starttime="20230311 16:07:48.565" endtime="20230311 16:07:48.570"/>
+</kw>
+<msg timestamp="20230311 16:07:48.571" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20230311 16:07:48.574" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'app' option is required for reinstall
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'app' option is required for reinstall
+    at getResponseForW3CError (C:\Users\sankhya\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Users\sankhya\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:380:37)</msg>
+<msg timestamp="20230311 16:07:48.575" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\sankhya\AppData\Local\Programs\Python\Python311\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sankhya\AppData\Local\Programs\Python\Python311\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 21, in _run_on_failure_decorator
+    raise err
+  File "C:\Users\sankhya\AppData\Local\Programs\Python\Python311\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sankhya\AppData\Local\Programs\Python\Python311\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 60, in open_application
+    application = webdriver.Remote(str(remote_url), options=desired_caps, strict_ssl=strict_ssl)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sankhya\AppData\Local\Programs\Python\Python311\Lib\site-packages\appium\webdriver\webdriver.py", line 230, in __init__
+    super().__init__(
+  File "C:\Users\sankhya\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 286, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "C:\Users\sankhya\AppData\Local\Programs\Python\Python311\Lib\site-packages\appium\webdriver\webdriver.py", line 320, in start_session
+    response = self.execute(RemoteCommand.NEW_SESSION, w3c_caps)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sankhya\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 440, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\sankhya\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'app' option is required for reinstall
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'app' option is required for reinstall
+    at getResponseForW3CError (C:\Users\sankhya\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Users\sankhya\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:380:37)</msg>
+<status status="FAIL" starttime="20230311 16:07:44.408" endtime="20230311 16:07:48.575"/>
+</kw>
+<status status="FAIL" starttime="20230311 16:07:44.407" endtime="20230311 16:07:48.576">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: 'app' option is required for reinstall
+Stacktrace:
+UnknownError: An unknown server-side error occurred while processing the command. Original error: 'app' option is required for reinstall
+    at getResponseForW3CError (C:\Users\sankhya\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:804:9)
+    at asyncHandler (C:\Users\sankhya\AppData\Roaming\npm\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:380:37)</status>
+</test>
+<status status="FAIL" starttime="20230311 16:07:44.246" endtime="20230311 16:07:48.579"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="biaLoginDEV">biaLoginDEV</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230311 16:07:48.571" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>
