@@ -18,8 +18,8 @@ Validação de login com sucesso no Linkedin
 
 *** Keywords ***
 And preencha e-mail e senha
-    Input Text       ${Campo_email}         dexter342@gmail.com
-    Input Text       ${Campo_senha}         11091990a
+    Input Text       ${Campo_email}         -----
+    Input Text       ${Campo_senha}         -----
 
 When clicar no botão    
     Click Button     ${Clique_butão} 
