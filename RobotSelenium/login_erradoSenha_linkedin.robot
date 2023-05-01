@@ -18,9 +18,9 @@ Validação de erro no login com senha errada no Linkedin
 
 *** Keywords ***
 And preencha e-mail
-    Input Text    ${Campo_email}    dexter342@gmail.com
+    Input Text    ${Campo_email}    -----
 And preencha senha erradamente
-    Input Text    ${Campo_senha}    teste2
+    Input Text    ${Campo_senha}    -----
 When clicar no botão
     Click Button    ${Clique_butão}
 Then aparecerá uma mensagem de erro de senha ou e-mail
