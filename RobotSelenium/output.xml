@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230501 12:55:56.356" rpa="false" schemaversion="3">
+<suite id="s1" name="login erradoSenha linkedin" source="C:\Users\sankhya\Downloads\RobotSelenium\login_erradoSenha_linkedin.robot">
+<test id="s1-t1" name="Validação de login sem sucesso no Linkedin" line="13">
+<kw name="Given que eu acesse o Linkedin" library="setup_teardown" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=https://br.linkedin.com/</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230501 12:55:56.549" level="INFO">Opening browser 'Chrome' to base url 'https://br.linkedin.com/'.</msg>
+<status status="PASS" starttime="20230501 12:55:56.549" endtime="20230501 12:56:00.557"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230501 12:56:00.557" endtime="20230501 12:56:00.708"/>
+</kw>
+<status status="PASS" starttime="20230501 12:55:56.548" endtime="20230501 12:56:00.708"/>
+</kw>
+<kw name="And preencha e-mail">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Campo_email}</arg>
+<arg>dexter342@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230501 12:56:00.711" level="INFO">Typing text 'dexter342@gmail.com' into text field 'id:session_key'.</msg>
+<status status="PASS" starttime="20230501 12:56:00.710" endtime="20230501 12:56:00.885"/>
+</kw>
+<status status="PASS" starttime="20230501 12:56:00.710" endtime="20230501 12:56:00.886"/>
+</kw>
+<kw name="And preencha senha erradamente">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Campo_senha}</arg>
+<arg>teste2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230501 12:56:00.887" level="INFO">Typing text 'teste2' into text field 'id:session_password'.</msg>
+<status status="PASS" starttime="20230501 12:56:00.886" endtime="20230501 12:56:00.972"/>
+</kw>
+<status status="PASS" starttime="20230501 12:56:00.886" endtime="20230501 12:56:00.972"/>
+</kw>
+<kw name="When clicar no botão">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${Clique_butão}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230501 12:56:00.972" level="INFO">Clicking button 'data:id:sign-in-form__submit-btn'.</msg>
+<status status="PASS" starttime="20230501 12:56:00.972" endtime="20230501 12:56:01.710"/>
+</kw>
+<status status="PASS" starttime="20230501 12:56:00.972" endtime="20230501 12:56:01.710"/>
+</kw>
+<kw name="Then aparecerá uma mensagem de erro de senha ou e-mail">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id:error-for-password</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230501 12:56:01.786" level="INFO">Element 'id:error-for-password' is displayed.</msg>
+<status status="PASS" starttime="20230501 12:56:01.711" endtime="20230501 12:56:01.786"/>
+</kw>
+<status status="PASS" starttime="20230501 12:56:01.711" endtime="20230501 12:56:01.786"/>
+</kw>
+<status status="PASS" starttime="20230501 12:55:56.548" endtime="20230501 12:56:01.786"/>
+</test>
+<status status="PASS" starttime="20230501 12:55:56.357" endtime="20230501 12:56:01.787"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="login erradoSenha linkedin">login erradoSenha linkedin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
