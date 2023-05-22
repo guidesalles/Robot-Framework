@@ -29,20 +29,26 @@ Loguin na BIA com sucesso
 
 *** Keywords ***
 Dado que eu abra o app da bia
-    Open Application     ${url}    platformName=${Plataforma}    deviceName=${pixel4}    appPackage=${package}    appActivity=${activity}   automationName=appium
+    Open Application     ${url}    platformName=${Plataforma}    deviceName=${emulador}    appPackage=${package}    appActivity=${activity}   automationName=appium
 
 E clique no botão pular tutorial
-    Wait Until Element Is Visible    accessibility_id=PULAR    
+    Wait Until Element Is Visible    accessibility_id=PULAR       timeout=25   
     Click Element                    accessibility_id=PULAR
 
 E preencha o banco
-    Wait Until Element Is Visible        accessibility_id=PRÓXIMO
-    Input Text                           xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText    ${urlBancoProd}
-    Click Element                        accessibility_id=PRÓXIMO      
+    Wait Until Page Contains Element         class=android.widget.EditText    timeout=10s
+    Click Text                               Endereço externo* 
+    Input Text                               class=android.widget.EditText   ${urlBancoProd}
+    Hide Keyboard                            
+    Click Element                            accessibility_id=PRÓXIMO
 
 E fizer o login correto
-    Input Text           class=android.widget.EditText    ${loginBIA}
-    Input Text           class=android.widget.EditText    ${senhaBIA}        
+    Wait Until Page Contains Element        class=android.widget.EditText
+    Click Text                              Usuário  
+    Input Text                              class=android.widget.EditText    ${loginBIA}
+    Click Text                              Senha  
+    Input Text Into Current Element         ${senhaBIA} 
+    Hide Keyboard       
 
 Quando eu clicar no botão entrar
     Click Element        accessibility_id=ENTRAR
