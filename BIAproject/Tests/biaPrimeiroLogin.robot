@@ -22,7 +22,8 @@ Loguin na BIA com sucesso
     E clique no botão pular tutorial
     E preencha o banco
     E fizer o login correto
-    Quando eu clicar no botão entrar
+    E eu clicar no botão entrar
+    Quando eu der as autorizações do Android
     Então poderei ver o feed da BIA
         
 
@@ -32,13 +33,13 @@ Dado que eu abra o app da bia
     Open Application     ${url}    platformName=${Plataforma}    deviceName=${emulador}    appPackage=${package}    appActivity=${activity}   automationName=appium
 
 E clique no botão pular tutorial
-    Wait Until Element Is Visible    accessibility_id=PULAR       timeout=25   
+    Wait Until Element Is Visible    accessibility_id=PULAR       timeout=20   
     Click Element                    accessibility_id=PULAR
 
 E preencha o banco
-    Wait Until Page Contains Element         class=android.widget.EditText    timeout=10s
-    Click Text                               Endereço externo* 
-    Input Text                               class=android.widget.EditText   ${urlBancoProd}
+    Wait Until Page Contains Element         class=android.widget.EditText    timeout=10
+    Click Text                               Endereço externo*
+    Input Text Into Current Element          ${urlBancoProd}  
     Hide Keyboard                            
     Click Element                            accessibility_id=PRÓXIMO
 
@@ -50,8 +51,15 @@ E fizer o login correto
     Input Text Into Current Element         ${senhaBIA} 
     Hide Keyboard       
 
-Quando eu clicar no botão entrar
+E eu clicar no botão entrar
     Click Element        accessibility_id=ENTRAR
 
+Quando eu der as autorizações do Android
+    Wait Until Element Is Visible        id=com.android.permissioncontroller:id/permission_allow_foreground_only_button
+    Click Element                        id=com.android.permissioncontroller:id/permission_allow_foreground_only_button
+    Wait Until Element Is Visible        id=com.android.permissioncontroller:id/permission_allow_button
+    Click Element                        id=com.android.permissioncontroller:id/permission_allow_button
+
 Então poderei ver o feed da BIA
-    Element Should Be Visible        android.view.View
+    Wait Until Element Is Visible            class=android.view.View               timeout=6 
+    Element Should Be Visible                class=android.view.View
