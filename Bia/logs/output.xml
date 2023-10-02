@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.5 on win32)" generated="20231002 16:59:07.340" rpa="false" schemaversion="4">
+<suite id="s1" name="biaPrimeiroLogin" source="D:\Users\xui8\AppiumProject\Bia\tests\biaPrimeiroLogin.robot">
+<test id="s1-t1" name="Loguin na BIA com sucesso" line="10">
+<kw name="Dado que eu abra o app da bia" library="loginCompleto">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${url}</arg>
+<arg>platformName=${Plataforma}</arg>
+<arg>deviceName=${Oneplus7}</arg>
+<arg>appPackage=${package}</arg>
+<arg>appActivity=${activity}</arg>
+<arg>automationName=appium</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20231002 16:59:07.489" endtime="20231002 16:59:15.917"/>
+</kw>
+<status status="PASS" starttime="20231002 16:59:07.488" endtime="20231002 16:59:15.917"/>
+</kw>
+<kw name="E clique no botão pular tutorial" library="loginCompleto">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>accessibility_id=PULAR</arg>
+<arg>timeout=20</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20231002 16:59:15.917" endtime="20231002 16:59:18.467"/>
+</kw>
+<kw name="Hide Keyboard" library="AppiumLibrary">
+<doc>Hides the software keyboard on the device. (optional) In iOS, use `key_name` to press
+a particular key, ex. `Done`. In Android, no parameters are used.</doc>
+<status status="PASS" starttime="20231002 16:59:18.467" endtime="20231002 16:59:19.713"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>accessibility_id=PULAR</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231002 16:59:19.714" level="INFO">Clicking element 'accessibility_id=PULAR'.</msg>
+<status status="PASS" starttime="20231002 16:59:19.713" endtime="20231002 16:59:19.845"/>
+</kw>
+<status status="PASS" starttime="20231002 16:59:15.917" endtime="20231002 16:59:19.845"/>
+</kw>
+<kw name="E preencha o banco" library="loginCompleto">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>class=android.widget.EditText</arg>
+<arg>timeout=20</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20231002 16:59:19.846" endtime="20231002 16:59:20.468"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>class=android.widget.EditText</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231002 16:59:20.469" level="INFO">Clicking element 'class=android.widget.EditText'.</msg>
+<status status="PASS" starttime="20231002 16:59:20.468" endtime="20231002 16:59:20.603"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231002 16:59:22.607" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231002 16:59:20.603" endtime="20231002 16:59:22.607"/>
+</kw>
+<kw name="Input Text Into Current Element" library="AppiumLibrary">
+<arg>${urlServidorProd}</arg>
+<doc>Types the given `text` into currently selected text field.</doc>
+<msg timestamp="20231002 16:59:22.608" level="INFO">Typing text 'https://skw.sankhya.com.br' into current text field</msg>
+<status status="PASS" starttime="20231002 16:59:22.607" endtime="20231002 16:59:22.756"/>
+</kw>
+<kw name="Hide Keyboard" library="AppiumLibrary">
+<doc>Hides the software keyboard on the device. (optional) In iOS, use `key_name` to press
+a particular key, ex. `Done`. In Android, no parameters are used.</doc>
+<status status="PASS" starttime="20231002 16:59:22.756" endtime="20231002 16:59:24.535"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>accessibility_id=PRÓXIMO</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231002 16:59:24.537" level="INFO">Clicking element 'accessibility_id=PRÓXIMO'.</msg>
+<status status="PASS" starttime="20231002 16:59:24.535" endtime="20231002 16:59:25.174"/>
+</kw>
+<status status="PASS" starttime="20231002 16:59:19.846" endtime="20231002 16:59:25.174"/>
+</kw>
+<kw name="E fizer o login correto" library="loginCompleto">
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>class=android.widget.EditText</arg>
+<arg>timeout=15</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20231002 16:59:25.175" endtime="20231002 16:59:26.177"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231002 16:59:26.178" level="INFO">Clicking element 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]'.</msg>
+<msg timestamp="20231002 16:59:26.474" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[1]</msg>
+<status status="PASS" starttime="20231002 16:59:26.177" endtime="20231002 16:59:26.474"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>class=android.widget.EditText</arg>
+<arg>${loginBIA}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20231002 16:59:26.475" level="INFO">Typing text 'BIA' into text field 'class=android.widget.EditText'</msg>
+<status status="PASS" starttime="20231002 16:59:26.474" endtime="20231002 16:59:27.513"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231002 16:59:27.514" level="INFO">Clicking element 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]'.</msg>
+<msg timestamp="20231002 16:59:28.395" level="INFO">xpath criteria: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText[2]</msg>
+<status status="PASS" starttime="20231002 16:59:27.513" endtime="20231002 16:59:28.395"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231002 16:59:29.407" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231002 16:59:28.395" endtime="20231002 16:59:29.407"/>
+</kw>
+<kw name="Input Text Into Current Element" library="AppiumLibrary">
+<arg>${senhaBIA}</arg>
+<doc>Types the given `text` into currently selected text field.</doc>
+<msg timestamp="20231002 16:59:29.408" level="INFO">Typing text 'sankhya07' into current text field</msg>
+<status status="PASS" starttime="20231002 16:59:29.407" endtime="20231002 16:59:29.532"/>
+</kw>
+<kw name="Hide Keyboard" library="AppiumLibrary">
+<doc>Hides the software keyboard on the device. (optional) In iOS, use `key_name` to press
+a particular key, ex. `Done`. In Android, no parameters are used.</doc>
+<status status="PASS" starttime="20231002 16:59:29.532" endtime="20231002 16:59:32.905"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>accessibility_id=ENTRAR</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231002 16:59:32.906" level="INFO">Clicking element 'accessibility_id=ENTRAR'.</msg>
+<status status="PASS" starttime="20231002 16:59:32.905" endtime="20231002 16:59:33.549"/>
+</kw>
+<status status="PASS" starttime="20231002 16:59:25.174" endtime="20231002 16:59:33.550"/>
+</kw>
+<kw name="E aceitar os termos" library="loginCompleto">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>accessibility_id=ACEITAR</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20231002 16:59:33.550" endtime="20231002 16:59:35.169"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>accessibility_id=ACEITAR</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231002 16:59:35.171" level="INFO">Clicking element 'accessibility_id=ACEITAR'.</msg>
+<status status="PASS" starttime="20231002 16:59:35.170" endtime="20231002 16:59:35.301"/>
+</kw>
+<status status="PASS" starttime="20231002 16:59:33.550" endtime="20231002 16:59:35.301"/>
+</kw>
+<kw name="Quando eu der as autorizações do Android" library="loginCompleto">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=com.android.permissioncontroller:id/permission_allow_foreground_only_button</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20231002 16:59:36.242" level="INFO">criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button</msg>
+<status status="PASS" starttime="20231002 16:59:35.302" endtime="20231002 16:59:36.242"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.android.permissioncontroller:id/permission_allow_foreground_only_button</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231002 16:59:36.243" level="INFO">Clicking element 'id=com.android.permissioncontroller:id/permission_allow_foreground_only_button'.</msg>
+<msg timestamp="20231002 16:59:36.342" level="INFO">criteria is com.android.permissioncontroller:id/permission_allow_foreground_only_button</msg>
+<status status="PASS" starttime="20231002 16:59:36.242" endtime="20231002 16:59:36.342"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>id=com.android.permissioncontroller:id/permission_allow_button</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<msg timestamp="20231002 16:59:37.264" level="INFO">criteria is com.android.permissioncontroller:id/permission_allow_button</msg>
+<status status="PASS" starttime="20231002 16:59:36.342" endtime="20231002 16:59:37.264"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=com.android.permissioncontroller:id/permission_allow_button</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231002 16:59:37.265" level="INFO">Clicking element 'id=com.android.permissioncontroller:id/permission_allow_button'.</msg>
+<msg timestamp="20231002 16:59:37.382" level="INFO">criteria is com.android.permissioncontroller:id/permission_allow_button</msg>
+<status status="PASS" starttime="20231002 16:59:37.264" endtime="20231002 16:59:37.382"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>accessibility_id=Scrim</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20231002 16:59:37.382" endtime="20231002 16:59:38.418"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>accessibility_id=Scrim</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20231002 16:59:38.419" level="INFO">Clicking element 'accessibility_id=Scrim'.</msg>
+<status status="PASS" starttime="20231002 16:59:38.418" endtime="20231002 16:59:39.245"/>
+</kw>
+<status status="PASS" starttime="20231002 16:59:35.301" endtime="20231002 16:59:39.245"/>
+</kw>
+<kw name="Então poderei ver o feed da BIA" library="loginCompleto">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>class=android.view.View</arg>
+<arg>timeout=6</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20231002 16:59:39.246" endtime="20231002 16:59:39.363"/>
+</kw>
+<kw name="Element Should Be Visible" library="AppiumLibrary">
+<arg>class=android.view.View</arg>
+<doc>Verifies that element identified with locator is visible.</doc>
+<status status="PASS" starttime="20231002 16:59:39.363" endtime="20231002 16:59:39.499"/>
+</kw>
+<status status="PASS" starttime="20231002 16:59:39.246" endtime="20231002 16:59:39.499"/>
+</kw>
+<status status="PASS" starttime="20231002 16:59:07.488" endtime="20231002 16:59:39.499"/>
+</test>
+<status status="PASS" starttime="20231002 16:59:07.341" endtime="20231002 16:59:39.500"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="biaPrimeiroLogin">biaPrimeiroLogin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
