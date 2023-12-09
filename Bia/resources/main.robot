@@ -1,5 +1,0 @@
-*** Settings ***
-
-Library     AppiumLibrary
-
-
